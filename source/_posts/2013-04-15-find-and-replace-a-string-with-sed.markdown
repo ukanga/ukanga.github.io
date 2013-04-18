@@ -7,6 +7,6 @@ categories: [bash, sed, commandline]
 ---
 **Find and replace a string from several files with sed**
 
-```
+```bash
 $ find  . -name '*.html' -type f -exec sed -i 's/\ language="javascript"//g' {} \;
 ```
