@@ -3,11 +3,12 @@
 # ----------------------- #
 
 url: http://ukanga.github.io
-title: Code is Food,
+title: Code === Food,
 subtitle: and am hungry!
 author: Ukang'a Dickson
 simple_search: http://google.com/search
 description:
+ Just some code history in the day of a developer.
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
