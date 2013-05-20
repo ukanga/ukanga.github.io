@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: MyISAM | Code === Food,]]></title>
+  <link href="http://ukanga.github.io/blog/categories/myisam/atom.xml" rel="self"/>
+  <link href="http://ukanga.github.io/"/>
+  <updated>2013-05-20T12:18:03+03:00</updated>
+  <id>http://ukanga.github.io/</id>
+  <author>
+    <name><![CDATA[Ukang'a Dickson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[some lessons on altering mysql storage engine]]></title>
+    <link href="http://ukanga.github.io/blog/2013/05/20/some-lessons-on-altering-mysql-storage-engine/"/>
+    <updated>2013-05-20T11:46:00+03:00</updated>
+    <id>http://ukanga.github.io/blog/2013/05/20/some-lessons-on-altering-mysql-storage-engine</id>
+    <content type="html"><![CDATA[<p>Check what storage engine a particular table is using:
+<code>mysql
+SELECT table_name, engine FROM INFORMATION_SCHEMA.TABLES;
+</code></p>
+
+<p>Changing storage engine of a table;
+<code>mysql
+ALTER TABLE `table_name1` ENGINE = MyISAM;
+</code></p>
+
+<p>When altering a table engine from InnoDB to MyISAM, you have to delete all constraints
+ on the table otherwise you will get a foreign key constraint error. You can check the
+ constraints within a form using
+<code>mysql
+SHOW CREATE TABLE `table_name1`;
+</code>
+You can then drop the constraints like:
+<code>``mysql
+ALTER TABLE</code>table_mame1<code>DROP FOREIGN KEY</code>user_id_refs_id_1e020b58278eec2b`;
+````</p>
+]]></content>
+  </entry>
+  
+</feed>

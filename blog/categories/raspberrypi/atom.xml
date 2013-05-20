@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: raspberrypi | Code === Food,]]></title>
+  <link href="http://ukanga.github.io/blog/categories/raspberrypi/atom.xml" rel="self"/>
+  <link href="http://ukanga.github.io/"/>
+  <updated>2013-05-20T12:18:03+03:00</updated>
+  <id>http://ukanga.github.io/</id>
+  <author>
+    <name><![CDATA[Ukang'a Dickson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Vim with python support]]></title>
+    <link href="http://ukanga.github.io/blog/2013/05/04/vim-with-python-support/"/>
+    <updated>2013-05-04T16:18:00+03:00</updated>
+    <id>http://ukanga.github.io/blog/2013/05/04/vim-with-python-support</id>
+    <content type="html"><![CDATA[<p>I beat around the bush with my raspberrypi on raspbian trying to get python
+ support in vim, almost got to compiling vim from source, but it gave me the
+ chance to learn something new.</p>
+
+<ul>
+<li>If you want to check if vim has support for python then use the has() function i.e
+<code>:echo has('python')</code></li>
+<li>To install vim with python install <code>vim-nox</code> or get a suggestion from the package manager when you try to install <code>vim-python</code>.</li>
+<li>To compile a debian package from source, check <a href="http://forums.debian.net/viewtopic.php?f=16&amp;t=38976">this debian forum link</a>.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

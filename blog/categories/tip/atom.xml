@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: tip | Code === Food,]]></title>
+  <link href="http://ukanga.github.io/blog/categories/tip/atom.xml" rel="self"/>
+  <link href="http://ukanga.github.io/"/>
+  <updated>2013-05-20T12:18:03+03:00</updated>
+  <id>http://ukanga.github.io/</id>
+  <author>
+    <name><![CDATA[Ukang'a Dickson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[256 color support in gnome-terminal]]></title>
+    <link href="http://ukanga.github.io/blog/2013/05/04/256-color-support-in-gnome-terminal/"/>
+    <updated>2013-05-04T19:59:00+03:00</updated>
+    <id>http://ukanga.github.io/blog/2013/05/04/256-color-support-in-gnome-terminal</id>
+    <content type="html"><![CDATA[<p>To get the fancy color stuff that <a href="https://github.com/Lokaltog/powerline">powerline</a> provides and the great color schemes
+available for vim on gnome-terminal, you will have to ensure that $TERM is reported
+correctly. Under Profile Preferences > Title and Command > Custom Command set
+<code>env TERM=xterm-256color /bin/bash</code>.</p>
+
+<p>Got these tip from <a href="http://wujingyue.blogspot.com/2012/06/let-ubuntu-gnome-terminal-support-256.html">Blando's Blog</a>.</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sed | Code === Food,]]></title>
+  <link href="http://ukanga.github.io/blog/categories/sed/atom.xml" rel="self"/>
+  <link href="http://ukanga.github.io/"/>
+  <updated>2013-05-20T12:18:03+03:00</updated>
+  <id>http://ukanga.github.io/</id>
+  <author>
+    <name><![CDATA[Ukang'a Dickson]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[find and replace a string with sed]]></title>
+    <link href="http://ukanga.github.io/blog/2013/04/15/find-and-replace-a-string-with-sed/"/>
+    <updated>2013-04-15T15:38:00+03:00</updated>
+    <id>http://ukanga.github.io/blog/2013/04/15/find-and-replace-a-string-with-sed</id>
+    <content type="html"><![CDATA[<p><strong>Find and replace a string from several files with sed</strong></p>
+
+<p><code>bash
+$ find  . -name '*.html' -type f -exec sed -i 's/\ language="javascript"//g' {} \;
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
