@@ -5,11 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Vim with python support - Code === Food,</title>
+  <title>python sorted list of dictionaries - Code === Food,</title>
   <meta name="author" content="Ukang'a Dickson">
 
   
-  <meta name="description" content="I beat around the bush with my raspberrypi on raspbian trying to get python support in vim, almost got to compiling vim from source, but it gave me &hellip;">
+  <meta name="description" content="Picked up sorting list of python dictionaries from stackoverflow. 1
+2
+items = [{&quot;name&quot;: &quot;Denno&quot;, &quot;type&quot;: &quot;nickname &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +20,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://ukanga.github.io/blog/2013/05/04/vim-with-python-support">
+  <link rel="canonical" href="http://ukanga.github.io/blog/2013/05/31/python-sorted-list-of-dictionaries">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Code === Food," type="application/atom+xml">
@@ -68,7 +70,7 @@
   
   <header>
     
-      <h1 class="entry-title">Vim With Python Support</h1>
+      <h1 class="entry-title">Python Sorted List of Dictionaries</h1>
     
     
       <p class="meta">
@@ -84,23 +86,29 @@
   
 
 
-<time datetime="2013-05-04T16:18:00+03:00" pubdate data-updated="true">May 4<span>th</span>, 2013</time>
+<time datetime="2013-05-31T12:22:00+03:00" pubdate data-updated="true">May 31<span>st</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I beat around the bush with my raspberrypi on raspbian trying to get python
- support in vim, almost got to compiling vim from source, but it gave me the
- chance to learn something new.</p>
+<div class="entry-content"><p>Picked up sorting list of python dictionaries from <a href="http://stackoverflow.com/questions/72899/in-python-how-do-i-sort-a-list-of-dictionaries-by-values-of-the-dictionary">stackoverflow</a>.</p>
 
-<ul>
-<li>If you want to check if vim has support for python then use the has() function i.e
-<code>:echo has('python')</code></li>
-<li>To install vim with python install <code>vim-nox</code> or get a suggestion from the package manager when you try to install <code>vim-python</code>.</li>
-<li>To compile a debian package from source, check <a href="http://forums.debian.net/viewtopic.php?f=16&amp;t=38976">this debian forum link</a>.</li>
-</ul>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">items</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Denno&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;nickname&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Ugali&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;food&quot;</span><span class="p">}]</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s">&#39;type&#39;</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
 
 </div>
 
@@ -124,12 +132,12 @@
   
 
 
-<time datetime="2013-05-04T16:18:00+03:00" pubdate data-updated="true">May 4<span>th</span>, 2013</time>
+<time datetime="2013-05-31T12:22:00+03:00" pubdate data-updated="true">May 31<span>st</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/raspberrypi/'>raspberrypi</a>, <a class='category' href='/blog/categories/raspbian/'>raspbian</a>, <a class='category' href='/blog/categories/vim/'>vim</a>
+    <a class='category' href='/blog/categories/dict/'>dict</a>, <a class='category' href='/blog/categories/dictionaries/'>dictionaries</a>, <a class='category' href='/blog/categories/list/'>list</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/sort/'>sort</a>, <a class='category' href='/blog/categories/sorted/'>sorted</a>, <a class='category' href='/blog/categories/sorting/'>sorting</a>
   
 </span>
 
@@ -138,7 +146,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ukanga.github.io/blog/2013/05/04/vim-with-python-support/" data-via="" data-counturl="http://ukanga.github.io/blog/2013/05/04/vim-with-python-support/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://ukanga.github.io/blog/2013/05/31/python-sorted-list-of-dictionaries/" data-via="" data-counturl="http://ukanga.github.io/blog/2013/05/31/python-sorted-list-of-dictionaries/" >Tweet</a>
   
   
   
@@ -147,10 +155,8 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2013/04/18/mysql-commands-a-reminder/" title="Previous Post: Just a reminder: mysql commands">&laquo; Just a reminder: mysql commands</a>
+        <a class="basic-alignment left" href="/blog/2013/05/20/some-lessons-on-altering-mysql-storage-engine/" title="Previous Post: some lessons on altering mysql storage engine">&laquo; some lessons on altering mysql storage engine</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/05/04/256-color-support-in-gnome-terminal/" title="Next Post: 256 color support in gnome-terminal">256 color support in gnome-terminal &raquo;</a>
       
     </p>
   </footer>

@@ -4,7 +4,7 @@
   <title><![CDATA[Code === Food,]]></title>
   <link href="http://ukanga.github.io/atom.xml" rel="self"/>
   <link href="http://ukanga.github.io/"/>
-  <updated>2013-05-20T12:18:03+03:00</updated>
+  <updated>2013-05-31T12:38:42+03:00</updated>
   <id>http://ukanga.github.io/</id>
   <author>
     <name><![CDATA[Ukang'a Dickson]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[python sorted list of dictionaries]]></title>
+    <link href="http://ukanga.github.io/blog/2013/05/31/python-sorted-list-of-dictionaries/"/>
+    <updated>2013-05-31T12:22:00+03:00</updated>
+    <id>http://ukanga.github.io/blog/2013/05/31/python-sorted-list-of-dictionaries</id>
+    <content type="html"><![CDATA[<p>Picked up sorting list of python dictionaries from <a href="http://stackoverflow.com/questions/72899/in-python-how-do-i-sort-a-list-of-dictionaries-by-values-of-the-dictionary">stackoverflow</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">items</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Denno&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;nickname&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Ugali&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;food&quot;</span><span class="p">}]</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s">&#39;type&#39;</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[some lessons on altering mysql storage engine]]></title>

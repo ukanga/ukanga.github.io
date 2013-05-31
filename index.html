@@ -9,8 +9,9 @@
   <meta name="author" content="Ukang'a Dickson">
 
   
-  <meta name="description" content="Check what storage engine a particular table is using: 1
-SELECT table_name, engine FROM INFORMATION_SCHEMA.TABLES; Changing storage engine of a table &hellip;">
+  <meta name="description" content="Picked up sorting list of python dictionaries from stackoverflow. 1
+2
+items = [{&quot;name&quot;: &quot;Denno&quot;, &quot;type&quot;: &quot;nickname &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +67,58 @@ SELECT table_name, engine FROM INFORMATION_SCHEMA.TABLES; Changing storage engin
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/05/31/python-sorted-list-of-dictionaries/">Python Sorted List of Dictionaries</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-31T12:22:00+03:00" pubdate data-updated="true">May 31<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Picked up sorting list of python dictionaries from <a href="http://stackoverflow.com/questions/72899/in-python-how-do-i-sort-a-list-of-dictionaries-by-values-of-the-dictionary">stackoverflow</a>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">items</span> <span class="o">=</span> <span class="p">[{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Denno&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;nickname&quot;</span><span class="p">},</span> <span class="p">{</span><span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;Ugali&quot;</span><span class="p">,</span> <span class="s">&quot;type&quot;</span><span class="p">:</span> <span class="s">&quot;food&quot;</span><span class="p">}]</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">k</span><span class="p">:</span> <span class="n">k</span><span class="p">[</span><span class="s">&#39;type&#39;</span><span class="p">])</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Alternatively:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">operator</span> <span class="kn">import</span> <span class="n">itemgetter</span>
+</span><span class='line'><span class="n">sorted_items_by_type</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="s">&#39;type&#39;</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -336,6 +389,10 @@ correctly. Under Profile Preferences > Title and Command > Custom Command set
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/05/31/python-sorted-list-of-dictionaries/">python sorted list of dictionaries</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/05/20/some-lessons-on-altering-mysql-storage-engine/">some lessons on altering mysql storage engine</a>
       </li>
     
@@ -349,10 +406,6 @@ correctly. Under Profile Preferences > Title and Command > Custom Command set
     
       <li class="post">
         <a href="/blog/2013/04/18/mysql-commands-a-reminder/">Just a reminder: mysql commands</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/04/15/find-and-replace-a-string-with-sed/">find and replace a string with sed</a>
       </li>
     
   </ul>
